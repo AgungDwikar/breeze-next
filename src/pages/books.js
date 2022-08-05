@@ -60,7 +60,14 @@ const bookPage = () => {
                                 : books.map(book => (
                                       <div className=" mt-6">
                                           <p key={book.id}>
-                                              {book.id} | {book.name}
+                                              {book.id} | {book.name} |
+                                              {book.proce.toLocaleString(
+                                                  'id-ID',
+                                                  {
+                                                      style: 'currency',
+                                                      currency: 'IDR',
+                                                  },
+                                              )}
                                           </p>
                                       </div>
                                   ))}
